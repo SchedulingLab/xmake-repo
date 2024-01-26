@@ -25,13 +25,13 @@ package("glpk")
         os.cd(is_arch("x64", "x86_64") and "w64" or "w32")
         os.cp("config_VC", "config.h")
         local version = package:version()
-        local deffile = "glpk_" .. version:major() .. "_" .. version.minor() .. ".def"
-        io.replace(deffile, "glp_netgen_prob\n", "", {plain = true})
+        local basename = string.format("glpk_%d_%d", version:major(), version:minor())
+        io.replace(basename .. ".def", "glp_netgen_prob\n", "", {plain = true})
         import("package.tools.nmake").build(package, {"/f", package:config("shared") and "makefile_VC_DLL" or "makefile_VC"})
 
         if package:config("shared") then
-            os.cp("glpk_5_0.dll", package:installdir("bin"))
-            os.cp("glpk_5_0.lib", package:installdir("lib"))
+            os.cp(basename .. ".dll", package:installdir("bin"))
+            os.cp(basename .. ".lib", package:installdir("lib"))
         else
             os.cp("glpk.lib", package:installdir("lib"))
         end
