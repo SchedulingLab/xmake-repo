@@ -24,7 +24,9 @@ package("glpk")
     on_install("windows", function (package)
         os.cd(is_arch("x64", "x86_64") and "w64" or "w32")
         os.cp("config_VC", "config.h")
-        io.replace("glpk_5_0.def", "glp_netgen_prob\n", "", {plain = true})
+        local version = version = package:version()
+        local deffile = "glpk_" .. version:major() .. "_" .. version.minor() .. ".def"
+        io.replace(deffile, "glp_netgen_prob\n", "", {plain = true})
         import("package.tools.nmake").build(package, {"/f", package:config("shared") and "makefile_VC_DLL" or "makefile_VC"})
 
         if package:config("shared") then
