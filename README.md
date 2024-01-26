@@ -1,2 +1,5 @@
-# xmake-repo
-xmake repository for the libraries of Scheduling Lab
+# xmake repository for Scheduling Lab
+
+```lua
+add_repositories("sched-repo https://github.com/SchedulingLab/xmake-repo")
+```
