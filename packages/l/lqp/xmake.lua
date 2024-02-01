@@ -20,5 +20,5 @@ package("lqp")
               lqp::Problem problem;
               return 0;
             }
-        ]]}))
+        ]]}, {configs = {languages = "cxx17"}))
     end)
