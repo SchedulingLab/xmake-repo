@@ -5,7 +5,7 @@ package("lqp")
 
     set_urls("https://github.com/SchedulingLab/lqp/archive/refs/tags/v$(version).tar.gz")
 
-    add_versions("0.1", "d29b62977464646a6537e33289b35957e175390d895c89f05124e7949ae8b643")
+    add_versions("0.1.1", "2d83ee6bafd84a55a24e9128b6621b3624ab11aa5355b77f9a682d57afacc23d")
 
     add_deps("glpk")
 
