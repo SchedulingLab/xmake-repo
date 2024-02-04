@@ -1,7 +1,7 @@
 package("lqp")
     set_homepage("https://github.com/SchedulingLab/lqp")
     set_description("Linear and Quadratic Problem Model")
-    set_license("MIT")
+    set_license("GPL-3.0")
 
     set_urls("https://github.com/SchedulingLab/lqp/archive/refs/tags/v$(version).tar.gz")
 
