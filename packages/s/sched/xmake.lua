@@ -5,7 +5,7 @@ package("sched")
 
     set_urls("https://github.com/SchedulingLab/libsched.git")
 
-    add_versions("2024.02.04.1", "4f992fef908a78bd3f424bcd962fe34ea0c0a4ce")
+    add_versions("2024.02.05", "b2bb59408bfe2841702fd33bcc1dfae2efd18892")
 
     add_deps("lqp", "fmt", "nlohmann_json")
 
