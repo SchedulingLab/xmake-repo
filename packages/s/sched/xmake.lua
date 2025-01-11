@@ -15,7 +15,7 @@ package("sched")
 
     on_test(function (package)
         assert(package:check_cxxsnippets({test = [[
-            #include <sched/tools/Log.h>
+            #include <sched/support/Log.h>
             int main() {
               sched::Log::println("Hello World!");
               return 0;
